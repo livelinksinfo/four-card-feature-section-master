@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poplin, sans-serif, serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    line-height: 1.4em;
+    margin: 0;
+}
+.top-head {
+    font-size: 1.5em;
+    font-weight: 100;
+    font-stretch: semi-expanded;
+    
+}
+.container {
+    overflow-y: scroll;
+    width: 80%;
+    margin: 30px auto;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
+    padding: 3% 5%;
+    height: auto;
+    
+}
+
+.row {
+    max-width: 45%;
+    margin: 15px auto;
+    text-align: center;
+    
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%
+    
+}
+
+.flex-item-1, .flex-item-2, .flex-item-3 {
+    
+    box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
+    max-width: 30%;
+    padding: 12px 5px 5px 15px;
+    border-radius: 5px;
+    margin: 23px 10px;
+}
+
+.flex-item-3 {
+    border-top:3px solid hsl(212, 86%, 64%);
+}
+
+.flex-item-1 {
+    border-top:3px solid hsl(180, 62%, 55%);
+}
+
+.bottom {
+    margin-top: 15%;
+}
+
+    /* Making  .flex-item-2 to ddisplay as flex*/
+.flex-item-2 {
+    /* border-top:3px solid hsl(0, 78%, 62%); */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    
+    grid-row-gap: 35px;
+    height: 200px;
+    box-shadow: none;
+    border-radius: 5px;
+    grid-auto-flow: column;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+}
+.item {
+    border-top: 3px solid hsl(0, 78%, 62%);
+    box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
+    padding: 12px 5px 25px 15px;
+}
+
+.item-1 {
+    border-top: 3px solid hsl(34, 97%, 64%);
+    box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
+    padding: 12px 5px 25px 15px;
+    margin-bottom: 50px;
+}
+
+
+.svg {
+    
+    padding-left: 60px;
+}
+
+@media (max-width: 899px) {
+
+    .container {
+        max-width: 90%;
+        margin: auto ;
+    }
+
+    .flex-item-1, .flex-item-2, .flex-item-3 {
+         
+        max-width: 30%;
+        padding: 12px ;
+        border-radius: 5px;
+        margin: 23px 5px;
+    }
+
+    .flex-item-1, .flex-item-3 {
+        margin-top: 145px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex-item-1, .flex-item-2, .flex-item-3 {
+         
+        max-width: 80%;
+        padding: 12px ;
+        border-radius: 5px;
+        margin: 23px auto;
+}
+
+.flex-item-2 {
+    display: flex;
+    flex-direction: column; 
+    }
+
+    .row {
+        width: 100%;
+        margin: auto;
+    }
+}
