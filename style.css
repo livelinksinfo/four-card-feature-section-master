@@ -1,146 +1,148 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+.body-back {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 200px 250px 0 0 hsl(212, 86%, 64%), 100px 250px 0 0 hsl(212, 86%, 64%);
 }
 
 body {
-    font-family: poplin, sans-serif, serif;
+    font-family: sans-serif;
     font-size: 15px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    line-height: 1.4em;
-    margin: 0;
+    line-height: 1.5em;
+    background-image: element();
 }
-.top-head {
-    font-size: 1.5em;
-    font-weight: 100;
-    font-stretch: semi-expanded;
-    
-}
+
 .container {
-    overflow-y: scroll;
     width: 80%;
-    margin: 30px auto;
+    margin: 70px auto;
     background-color: hsl(0, 0%, 98%);
     border-radius: 5px;
     box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
-    padding: 3% 5%;
+    padding: 4% 5%;
     height: auto;
-    
 }
 
-.row {
-    max-width: 45%;
-    margin: 15px auto;
-    text-align: center;
-    
+.sub-title {
+    font-size: 1.5em;
+    font-weight: 100;
+    font-stretch: semi-expanded;
 }
 
-.flex {
+.card {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%
-    
+    /* flex-wrap: wrap; */
 }
 
-.flex-item-1, .flex-item-2, .flex-item-3 {
-    
+.sub-title,
+.tech,
+.middle {
+    width: 45%;
+    margin: 12px auto;
+    text-align: center;
+}
+
+.card-item {
     box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
-    max-width: 30%;
-    padding: 12px 5px 5px 15px;
+    width: 33.33%;
+    padding: 12px 15px 5px 15px;
     border-radius: 5px;
-    margin: 23px 10px;
+    margin: 30px 25px;
+    height: 250px;
 }
 
-.flex-item-3 {
-    border-top:3px solid hsl(212, 86%, 64%);
+h1 {
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
-.flex-item-1 {
-    border-top:3px solid hsl(180, 62%, 55%);
+.move-down {
+    margin-top: 150px;
 }
 
-.bottom {
-    margin-top: 15%;
+.red {
+    border-top: 3px solid hsl(0, 78%, 62%);
 }
 
-    /* Making  .flex-item-2 to ddisplay as flex*/
-.flex-item-2 {
-    /* border-top:3px solid hsl(0, 78%, 62%); */
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
-    
-    grid-row-gap: 35px;
-    height: 200px;
-    box-shadow: none;
-    border-radius: 5px;
-    grid-auto-flow: column;
+.cyan {
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+.yellow {
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.blue {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+img {
+    float: right;
+    margin-top: 25px;
+}
+
+.centre {
+    width: 33.33%
+}
+
+.full {
+    width: 100%;
+    margin: 30px auto;
+    height: 250px;
 }
 
 p {
-    color: hsl(229, 6%, 66%);
-}
-.item {
-    border-top: 3px solid hsl(0, 78%, 62%);
-    box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
-    padding: 12px 5px 25px 15px;
+    color: hsl(229, 6%, 66%)
+    /* hsl(0, 0%, 98%); */
 }
 
-.item-1 {
-    border-top: 3px solid hsl(34, 97%, 64%);
-    box-shadow: 0px 0px 15px 0px hsl(246, 34%, 87%);
-    padding: 12px 5px 25px 15px;
-    margin-bottom: 50px;
-}
-
-
-.svg {
-    
-    padding-left: 60px;
-}
-
-@media (max-width: 899px) {
-
+@media (max-width: 952px) {
     .container {
-        max-width: 90%;
-        margin: auto ;
+        width: 90%;
+        padding: 10px 20px;
+        margin: 12px auto;
     }
-
-    .flex-item-1, .flex-item-2, .flex-item-3 {
-         
-        max-width: 30%;
-        padding: 12px ;
-        border-radius: 5px;
-        margin: 23px 5px;
+    .card-item,
+    .centre {
+        width: 200px;
+        height: 250px;
+        /* margin: 10px 5px; */
     }
-
-    .flex-item-1, .flex-item-3 {
-        margin-top: 145px;
+    img {
+        margin-top: 12px;
     }
-
 }
 
-@media (max-width: 500px) {
-    .flex {
+@media (max-width: 600px) {
+    .card {
         flex-direction: column;
+        width: 90%;
+        margin: 25px auto;
     }
-
-    .flex-item-1, .flex-item-2, .flex-item-3 {
-         
-        max-width: 80%;
-        padding: 12px ;
-        border-radius: 5px;
-        margin: 23px auto;
-}
-
-.flex-item-2 {
-    display: flex;
-    flex-direction: column; 
-    }
-
-    .row {
+    .card-item,
+    .centre {
         width: 100%;
-        margin: auto;
+        margin: 25px auto;
+    }
+    .container {
+        box-shadow: none;
+        background-color: #ffffff;
+        margin: 15px auto;
+    }
+    .tech,
+    .sub-title,
+    .middle {
+        width: 80%;
+    }
+    .centre {
+        margin: 0px 0;
+    }
+    .full {
+        margin-bottom: 15px;
     }
 }
